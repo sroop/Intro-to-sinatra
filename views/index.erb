@@ -1,21 +1,12 @@
-<html>
-	<head>
-		<title>This is my kitten page!</title>
-		<link href="/stylesheets/application.css" rel="stylesheet" type="text/css">
-	</head>
-	<body>
-		<div class='kitten'>
-			<% if @visitor %>
-			Hello, <%= @visitor %>!
-			<% else %>
-			<form action="/hello">
-			My name is <%= @name %>.
-			What's your name?
-			<input type="text" name="name">
-			<input type="submit">
-			</form>
-			<% end %>
-			<image src='/images/kitten.png'>
-		</div>
-	</body>
-</html>
+
+<% if @visitor %>
+	Hello, <%= @visitor %>!
+<% else %>
+	<form action="/hello">
+		My name is <%= @name %>.
+		What's your name?
+		<input type="text" name="name">
+		<input type="submit">
+	</form>
+<% end %>
+<image src='/images/kitten.png'>
