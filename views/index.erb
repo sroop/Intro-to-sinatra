@@ -1,9 +1,20 @@
-<div style='border: 3px dashed red'>
-<% if @visitor %>
-Hello, <%= @visitor %>!
-<% end %>
-<% if @name %>
-My name is <%= @name %>
-<% end %>
-	<image src='http://bit.ly/1eze8aE'>
-</div
+<html>
+	<head>
+		<title>This is my kitten page!</title>
+	</head>
+	<body>
+		<div style='border: 3px dashed red'>
+			<% if @visitor %>
+			Hello, <%= @visitor %>!
+			<% else %>
+			<form action="/hello">
+			My name is <%= @name %>.
+			What's your name?
+			<input type="text" name="name">
+			<input type="submit">
+			</form>
+			<% end %>
+			<image src='/images/kitten.png'>
+		</div>
+	</body>
+</html>
